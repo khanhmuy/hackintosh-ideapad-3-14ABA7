@@ -20,6 +20,7 @@
 - **DO NOT USE ANY INSTALLER NOT FROM APPLE**, no one knows if/how they've been tampered with, and they *always* break the APFS system volume seal, which breaks OTA updates, and are generally not trustworthy at all.
 ### Issues
 - Built-in Realtek 8822CE Wi-FI and Bluetooth DOES NOT work.
+- Wake from sleep does not work.
 - Audio over HDMI doesn't work. [#76](https://github.com/NootInc/NootedRed/issues/76)
 - Most of the kexts and OC itself are `DEBUG` versions, which may increase boot times. Replace them if you're bothered (not needed in 0.7.7 and newer).
 - General instability when using GPU-intensive applications and Chromium - based browsers / Electron apps. [#13](https://github.com/NootInc/NootedRed/issues/13). Workaround for now is to use Safari.
@@ -32,28 +33,21 @@ oversaturated mess)
 ## Hardware
 
 |                                           | Specifications                                                                | macOS Compatibility                                                                                                                   |
-| ----------------------------------------- | ----------------------------------------------------------------------------- | 
---------------------------------------------------------------------------------------------------------------------------------------------- |
-| ``CPU``                                   | AMD Ryzen 5 5625U, 6 Cores / 12 Threads, 2.3GHz / 4.3GHz, 16MB L3 Cache | With native power management                                                                                                                                               
-|
+| ----------------------------------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| ``CPU``                                   | AMD Ryzen 5 5625U, 6 Cores / 12 Threads, 2.3GHz / 4.3GHz, 16MB L3 Cache | With native power management|
 | ``Memory``                                | 8GB DDR3-1600MHz                                  |                                                                                                                                               |
-| ``GPU``                                   | AMD Radeon Vega 7                                                       | With full QE/CI (Graphics accleration)                                                                                                                                             
-|                                                                                         |
+| ``GPU``                                   | AMD Radeon Vega 7                                                       | With full QE/CI (Graphics accleration)|
 | ``Storage``                               | Micron MTFDKCD256TFK                                              |                                                                                                                                              |
 | ``Screen``                                | 14.0" 1080p 60Hz, TN                                            |                                                                                                                                               |
-| ``Webcam``                                | Integrated HD Webcam                                                          | Works!                                                                                                                                            
-|
-| ``WiFi``                                  | Realtek(R) 8822CE PCI-E                                                        | Does NOT work.                                                                |
+| ``Webcam``                                | Integrated HD Webcam                                                          | Works!|
+| ``WiFi``                                  | Realtek(R) 8822CE PCI-E NIC                                                        | Does NOT work.                                                                |
 | ``Bluetooth``                             | Realtek                                                                         | Does NOT work. |
 | ``Input & Output``                        | USB 3.0 (USB-A) x1 + USB 3.1 (USB-C) x1 + USB 2.0 (USB-A) x1<br>HDMI 1.4                    | USB map provided. |
 | ``Audio``                            | Realtek ALC257                                                      |                                                                                                                                               |
-| ``Battery``                               | 40Wh Lithium-ion                                                                  | Battery readout works.                                                                                                                                 
-|
-| ``Keyboard``                              | -                                                                             |                                                                                                                                               
-|
+| ``Battery``                               | 40Wh Lithium-ion                                                                  | Battery readout works.|
+| ``Keyboard``                              | -||
 | ``Touchpad``                              | Dell Touchpad (Synaptics SMBus, I2C)                                                                | No issues.                                                                                            |
-| ``Dimensions``<br>``Weight``<br>``Power`` | 324.2 x 215.7 x 19.9<br>1.43kg<br>65W Power Adapter                        | ACPI patches won't help with these                                                                                                            
-|
+| ``Dimensions``<br>``Weight``<br>``Power`` | 324.2 x 215.7 x 19.9<br>1.43kg<br>65W Power Adapter                        | ACPI patches won't help with these.|
 
 Special thanks to:
 - [acidanthera](https://github.com/acidanthera) - the maker of OpenCore and your favourite kexts, for making this Hackintosh possible in the first place
