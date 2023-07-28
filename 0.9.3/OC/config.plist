@@ -70,14 +70,6 @@
 				<key>Path</key>
 				<string>SSDT-SBUS-MCHC.aml</string>
 			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>SSDT-USBW.aml</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-USBW.aml</string>
-			</dict>
 		</array>
 		<key>Delete</key>
 		<array>
@@ -118,7 +110,7 @@
 				<key>BaseSkip</key>
 				<integer>0</integer>
 				<key>Comment</key>
-				<string>HPET _STA to XSTA Rename</string>
+				<string>HPET _STA to XSTA Rename (Disabled because touchpad breaks with this)</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
@@ -148,7 +140,7 @@
 				<key>BaseSkip</key>
 				<integer>0</integer>
 				<key>Comment</key>
-				<string>HPET _CRS to XCRS Rename</string>
+				<string>HPET _CRS to XCRS Rename (Disabled because touchpad breaks with this)</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
@@ -292,6 +284,36 @@
 				<key>TableSignature</key>
 				<data>AAAAAA==</data>
 			</dict>
+			<dict>
+				<key>Base</key>
+				<string></string>
+				<key>BaseSkip</key>
+				<integer>0</integer>
+				<key>Comment</key>
+				<string>XHC1 to SHCI</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>WEhDMQ==</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>OemTableId</key>
+				<data></data>
+				<key>Replace</key>
+				<data>U0hDSQ==</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data></data>
+			</dict>
 		</array>
 		<key>Quirks</key>
 		<dict>
@@ -405,10 +427,15 @@
 	<dict>
 		<key>Add</key>
 		<dict>
-			<key>PciRoot(0x1)/Pci(0x8,0x1)/Pci(0x0,0x4)</key>
+			<key>PciRoot(0x1)/Pci(0x2,0x4)/Pci(0x0,0x0)</key>
 			<dict>
-				<key>acpi-wake-type</key>
-				<data>AQ==</data>
+				<key>built-in</key>
+				<data>AQAAAA==</data>
+			</dict>
+			<key>PciRoot(0x1)/Pci(0x8,0x1)/Pci(0x0,0x6)</key>
+			<dict>
+				<key>layout-id</key>
+				<data>CwAAAA==</data>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -944,13 +971,13 @@
 				<key>Arch</key>
 				<string>Any</string>
 				<key>BundlePath</key>
-				<string>VoodooI2CELAN.kext</string>
+				<string>FeatureUnlock.kext</string>
 				<key>Comment</key>
-				<string>VoodooI2CELAN.kext</string>
+				<string>FeatureUnlock.kext</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/VoodooI2CELAN</string>
+				<string>Contents/MacOS/FeatureUnlock</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -962,13 +989,67 @@
 				<key>Arch</key>
 				<string>Any</string>
 				<key>BundlePath</key>
-				<string>USBWakeFixup.kext</string>
+				<string>AirportItlwm.kext</string>
 				<key>Comment</key>
-				<string>USBWakeFixup.kext</string>
+				<string>AirportItlwm.kext</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/USBWakeFixup</string>
+				<string>Contents/MacOS/AirportItlwm</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>IntelBTPatcher.kext</string>
+				<key>Comment</key>
+				<string>IntelBTPatcher.kext</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/IntelBTPatcher</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>IntelBluetoothFirmware.kext</string>
+				<key>Comment</key>
+				<string>IntelBluetoothFirmware.kext</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/IntelBluetoothFirmware</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>BlueToolFixup.kext</string>
+				<key>Comment</key>
+				<string>BlueToolFixup.kext</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/BlueToolFixup</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -1785,7 +1866,7 @@
 			<key>PollAppleHotKeys</key>
 			<false/>
 			<key>ShowPicker</key>
-			<true/>
+			<false/>
 			<key>TakeoffDelay</key>
 			<integer>0</integer>
 			<key>Timeout</key>
@@ -1794,11 +1875,11 @@
 		<key>Debug</key>
 		<dict>
 			<key>AppleDebug</key>
-			<true/>
+			<false/>
 			<key>ApplePanic</key>
-			<true/>
+			<false/>
 			<key>DisableWatchDog</key>
-			<true/>
+			<false/>
 			<key>DisplayDelay</key>
 			<integer>0</integer>
 			<key>DisplayLevel</key>
@@ -1834,7 +1915,7 @@
 		<key>Security</key>
 		<dict>
 			<key>AllowSetDefault</key>
-			<true/>
+			<false/>
 			<key>ApECID</key>
 			<integer>0</integer>
 			<key>AuthRestart</key>
@@ -1897,7 +1978,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>-v keepsyms=1 debug=0x100 swd_panic=1 npci=0x2000 alcid=11 revblock=media</string>
+				<string>keepsyms=1 debug=0x100 swd_panic=1 npci=0x2000 revblock=media -disable_nightshift</string>
 				<key>csr-active-config</key>
 				<data>AAAAAA==</data>
 				<key>prev-lang:kbd</key>

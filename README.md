@@ -11,15 +11,16 @@
 
 ## Info / Disclaimer
 ### Info
-- `boot-args` used: `-v keepsyms=1 debug=0x100 swd_panic=1 npci=0x2000 alcid=11 revblock=media`
+- `boot-args` used: `-v keepsyms=1 debug=0x100 swd_panic=1 npci=0x2000 alcid=11 revblock=media disable_nightshift`
 - `alcid`: `11`
 - SMBIOS: `MacBookPro16,3`
+- `ShowPicker`, `ScanPolicy` and `HideAuxilary` are set up in a way that automatically boots to a APFS partition with macOS installed without user confirmation. Adjust accordingly for installation (that's why you should read the guide).
 ### Usage
 - You can use it however you like, except for commercial purposes (such as work enviroments and reselling your Hackintosh), refer to the [Psystar case](https://en.wikipedia.org/wiki/Psystar_Corporation). TLDR, you'll get your ass sued if you do so.
 - Reminder that this is only a base for your OpenCore setup and should always be viewed as incomplete, and it is strongly recommended that you follow the entire OpenCore guide [here](https://dortania.github.io/OpenCore-Install-Guide/). 
 - **DO NOT USE ANY INSTALLER NOT FROM APPLE**, no one knows if/how they've been tampered with, and they *always* break the APFS system volume seal, which breaks OTA updates, and are generally not trustworthy at all.
 ### Issues
-- Built-in Realtek 8822CE Wi-FI and Bluetooth DOES NOT work.
+- Stock Realtek 8822CE Wi-FI and Bluetooth DOES NOT work. Replace with an Intel or native Broadcom card if you want full functionality.
 - Wake from sleep does not work.
 - Audio over HDMI doesn't work. [#76](https://github.com/NootInc/NootedRed/issues/76)
 - Most of the kexts and OC itself are `DEBUG` versions, which may increase boot times. Replace them if you're bothered (not needed in 0.7.7 and newer).
@@ -35,18 +36,18 @@ oversaturated mess)
 |                                           | Specifications                                                                | macOS Compatibility                                                                                                                   |
 | ----------------------------------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | ``CPU``                                   | AMD Ryzen 5 5625U, 6 Cores / 12 Threads, 2.3GHz / 4.3GHz, 16MB L3 Cache | With native power management|
-| ``Memory``                                | 8GB DDR3-1600MHz                                  |                                                                                                                                               |
+| ``Memory``                                | 8GB DDR34-3200MHz                                  |                                                                                                                                               |
 | ``GPU``                                   | AMD Radeon Vega 7                                                       | With full QE/CI (Graphics accleration)|
 | ``Storage``                               | Micron MTFDKCD256TFK                                              |                                                                                                                                              |
 | ``Screen``                                | 14.0" 1080p 60Hz, TN                                            |                                                                                                                                               |
 | ``Webcam``                                | Integrated HD Webcam                                                          | Works!|
-| ``WiFi``                                  | Realtek(R) 8822CE PCI-E NIC                                                        | Does NOT work.                                                                |
-| ``Bluetooth``                             | Realtek                                                                         | Does NOT work. |
+| ``WiFi``                                  | Intel(R) Dual Band Wireless AC 3160                                                        | Works with Airportitlwm.kext                                                                |
+| ``Bluetooth``                             | Intel                                                                         | Works. |
 | ``Input & Output``                        | USB 3.0 (USB-A) x1 + USB 3.1 (USB-C) x1 + USB 2.0 (USB-A) x1<br>HDMI 1.4                    | USB map provided. |
 | ``Audio``                            | Realtek ALC257                                                      |                                                                                                                                               |
 | ``Battery``                               | 40Wh Lithium-ion                                                                  | Battery readout works.|
 | ``Keyboard``                              | -||
-| ``Touchpad``                              | Dell Touchpad (Synaptics SMBus, I2C)                                                                | No issues.                                                                                            |
+| ``Touchpad``                              | ELAN(?) I2C Precision Touchpad                                                                | No issues.                                                                                            |
 | ``Dimensions``<br>``Weight``<br>``Power`` | 324.2 x 215.7 x 19.9<br>1.43kg<br>65W Power Adapter                        | ACPI patches won't help with these.|
 
 Special thanks to:
