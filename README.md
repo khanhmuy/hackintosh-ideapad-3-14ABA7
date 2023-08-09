@@ -16,7 +16,7 @@
 - SMBIOS: `MacBookPro16,3`
 - `ShowPicker`, `ScanPolicy` and `HideAuxilary` are set up in a way that automatically boots to a APFS partition with macOS installed without user confirmation. Adjust accordingly for installation (that's why you should read the guide).
 ### Usage
-- You can use it however you like, except for commercial purposes (such as work enviroments and reselling your Hackintosh), refer to the [Psystar case](https://en.wikipedia.org/wiki/Psystar_Corporation). TLDR, you'll get your ass sued if you do so.
+- You can use it however you like, except for commercial purposes (such as work environments and reselling your Hackintosh), refer to the [Psystar case](https://en.wikipedia.org/wiki/Psystar_Corporation). TLDR, you'll get your ass sued if you do so.
 - Reminder that this is only a base for your OpenCore setup and should always be viewed as incomplete, and it is strongly recommended that you follow the entire OpenCore guide [here](https://dortania.github.io/OpenCore-Install-Guide/). 
 - **DO NOT USE ANY INSTALLER NOT FROM APPLE**, no one knows if/how they've been tampered with, and they *always* break the APFS system volume seal, which breaks OTA updates, and are generally not trustworthy at all.
 ### Issues
@@ -36,8 +36,8 @@ oversaturated mess)
 |                                           | Specifications                                                                | macOS Compatibility                                                                                                                   |
 | ----------------------------------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | ``CPU``                                   | AMD Ryzen 5 5625U, 6 Cores / 12 Threads, 2.3GHz / 4.3GHz, 16MB L3 Cache | With native power management|
-| ``Memory``                                | 8GB DDR34-3200MHz                                  |                                                                                                                                               |
-| ``GPU``                                   | AMD Radeon Vega 7                                                       | With full QE/CI (Graphics accleration)|
+| ``Memory``                                | 16GB DDR4-3200MHz                                  |                                                                                                                                               |
+| ``GPU``                                   | AMD Radeon Vega 7                                                       | With full QE/CI (Graphics accleration), VRAM (UMA Buffer Size) set to 2GB|
 | ``Storage``                               | Micron MTFDKCD256TFK                                              |                                                                                                                                              |
 | ``Screen``                                | 14.0" 1080p 60Hz, TN                                            |                                                                                                                                               |
 | ``Webcam``                                | Integrated HD Webcam                                                          | Works!|
