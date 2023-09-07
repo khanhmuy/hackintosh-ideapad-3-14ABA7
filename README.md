@@ -14,7 +14,8 @@
 - `boot-args` used: `-v keepsyms=1 debug=0x100 swd_panic=1 npci=0x2000 alcid=11 revblock=media disable_nightshift`
 - `alcid`: `11`
 - SMBIOS: `MacBookPro16,3`
-- `ShowPicker`, `ScanPolicy` and `HideAuxilary` are set up in a way that automatically boots to a APFS partition with macOS installed without user confirmation. Adjust accordingly for installation (that's why you should read the guide).
+- ~~`ShowPicker`, `ScanPolicy` and `HideAuxilary` are set up in a way that automatically boots to a APFS partition with macOS installed without user confirmation. Adjust accordingly for installation (that's why you should read the guide).~~ You should still read the guide regardless.
+- NootedRed is not included, as it will be outdated anyway. Get it from its repository's [actions tab](https://github.com/ChefKissInc/NootedRed/actions)
 ### Usage
 - You can use it however you like, except for commercial purposes (such as work environments and reselling your Hackintosh), refer to the [Psystar case](https://en.wikipedia.org/wiki/Psystar_Corporation). TLDR, you'll get your ass sued if you do so.
 - Reminder that this is only a base for your OpenCore setup and should always be viewed as incomplete, and it is strongly recommended that you follow the entire OpenCore guide [here](https://dortania.github.io/OpenCore-Install-Guide/). 
@@ -24,7 +25,7 @@
 - Wake from sleep does not work.
 - Audio over HDMI doesn't work. [#76](https://github.com/NootInc/NootedRed/issues/76)
 - Most of the kexts and OC itself are `DEBUG` versions, which may increase boot times. Replace them if you're bothered (not needed in 0.7.7 and newer).
-- General instability when using GPU-intensive applications and Chromium - based browsers / Electron apps. [#13](https://github.com/NootInc/NootedRed/issues/13). Workaround for now is to use Safari.
+- General instability when using ~~GPU-intensive~~ OpenGL applications and Chromium - based browsers / Electron apps. ~~[#13](https://github.com/NootInc/NootedRed/issues/13)~~ resolved with the lastest build of NRed. Workaround for now is to use Safari or use Chromium's Angle renderer.
 ### Notes
 - Don't use case-sensitive APFS if you want to use Steam or Adobe tools.
 - After installation, open System Preferences and go to Displays -> Color, uncheck `Show profiles for this display only`, then select `sRGB IEC61966-2.1`, this will make your colors look *somewhat* right (definitely not calibrated or anything but yeah, not an 
