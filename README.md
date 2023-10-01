@@ -1,17 +1,18 @@
 # hackintosh-ideapad-3-14ABA7
 ## Intro
-![About This Mac](https://media.discordapp.net/attachments/974277281990209606/1127549519958134794/image.png)
+![About This Mac](https://media.discordapp.net/attachments/974199826063425556/1157947671689048125/vSPrkMw.png)
 
 |          | Version                 |
 |----------|-------------------------|
-| OpenCore | 0.9.3                   |
-| macOS    | Ventura 13.4.1 (22F82) |
+| OpenCore | 0.9.5                   |
+| macOS    | Ventura 14.0 (23A44)  |
 
-- Supported macOS versions: In theory this should work with any version supported by NootedRed, however only Ventura has been tested.
+- Supported macOS versions: In theory this should work with any version supported by NootedRed, however only Ventura and Sonoma has been tested.
+- Booting Sonoma (14) requires the 0.9.5 version.
 
 ## Info / Disclaimer
 ### Info
-- `boot-args` used: `-v keepsyms=1 debug=0x100 swd_panic=1 npci=0x2000 alcid=11 revblock=media disable_nightshift`
+- `boot-args` used: `-v keepsyms=1 debug=0x100 swd_panic=1 npci=0x2000 revblock=media`
 - `alcid`: `11`
 - SMBIOS: `MacBookPro16,3`
 - ~~`ShowPicker`, `ScanPolicy` and `HideAuxilary` are set up in a way that automatically boots to a APFS partition with macOS installed without user confirmation. Adjust accordingly for installation (that's why you should read the guide).~~ You should still read the guide regardless.
@@ -23,9 +24,8 @@
 ### Issues
 - Stock Realtek 8822CE Wi-FI and Bluetooth DOES NOT work. Replace with an Intel or native Broadcom card if you want full functionality.
 - Wake from sleep does not work.
-- Audio over HDMI doesn't work. [#76](https://github.com/NootInc/NootedRed/issues/76)
-- Most of the kexts and OC itself are `DEBUG` versions, which may increase boot times. Replace them if you're bothered (not needed in 0.7.7 and newer).
-- General instability when using ~~GPU-intensive~~ OpenGL applications and Chromium - based browsers / Electron apps. ~~[#13](https://github.com/NootInc/NootedRed/issues/13)~~ resolved with the lastest build of NRed. Workaround for now is to use Safari or use Chromium's Angle renderer.
+- ~Audio over HDMI doesn't work. [#76](https://github.com/NootInc/NootedRed/issues/76)~ Works with the latest builds of NootedRed.
+- General instability when using ~~GPU-intensive~~ OpenGL applications and Chromium - based browsers / Electron apps. ~~[#13](https://github.com/NootInc/NootedRed/issues/13)~~ resolved with the lastest build of NRed. Workaround for now is to use Safari.
 ### Notes
 - Don't use case-sensitive APFS if you want to use Steam or Adobe tools.
 - After installation, open System Preferences and go to Displays -> Color, uncheck `Show profiles for this display only`, then select `sRGB IEC61966-2.1`, this will make your colors look *somewhat* right (definitely not calibrated or anything but yeah, not an 
