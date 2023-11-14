@@ -4,11 +4,10 @@
 
 |          | Version                 |
 |----------|-------------------------|
-| OpenCore | 0.9.5                   |
+| OpenCore | 0.9.6                   |
 | macOS    | Ventura 14.0 (23A44)  |
 
 - Supported macOS versions: In theory this should work with any version supported by NootedRed, however only Ventura and Sonoma has been tested.
-- Booting Sonoma (14) requires the 0.9.5 version.
 
 ## Info / Disclaimer
 ### Info
@@ -42,7 +41,7 @@ oversaturated mess)
 | ``Storage``                               | Micron MTFDKCD256TFK                                              |                                                                                                                                              |
 | ``Screen``                                | 14.0" 1080p 60Hz, TN                                            |                                                                                                                                               |
 | ``Webcam``                                | Integrated HD Webcam                                                          | Works!|
-| ``WiFi``                                  | Intel(R) Dual Band Wireless AC 3160                                                        | Works with Airportitlwm.kext                                                                |
+| ``WiFi``                                  | Intel(R) Dual Band Wireless AC 8265                                                        | Works with Airportitlwm.kext                                                                |
 | ``Bluetooth``                             | Intel                                                                         | Works. |
 | ``Input & Output``                        | USB 3.0 (USB-A) x1 + USB 3.1 (USB-C) x1 + USB 2.0 (USB-A) x1<br>HDMI 1.4                    | USB map provided. |
 | ``Audio``                            | Realtek ALC257                                                      |                                                                                                                                               |
