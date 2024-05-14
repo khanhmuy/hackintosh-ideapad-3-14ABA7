@@ -11,7 +11,7 @@
 
 ## Info / Disclaimer
 ### Info
-- `boot-args` used: `-v keepsyms=1 debug=0x100 swd_panic=1 npci=0x2000 revblock=media`
+- `boot-args` used: `keepsyms=1 debug=0x100 swd_panic=1 npci=0x2000 revblock=media`
 - `alcid`: `11`
 - SMBIOS: `MacBookPro16,3`
 - ~~`ShowPicker`, `ScanPolicy` and `HideAuxilary` are set up in a way that automatically boots to a APFS partition with macOS installed without user confirmation. Adjust accordingly for installation (that's why you should read the guide).~~ You should still read the guide regardless.
@@ -38,7 +38,7 @@ oversaturated mess)
 | ``CPU``                                   | AMD Ryzen 5 5625U, 6 Cores / 12 Threads, 2.3GHz / 4.3GHz, 16MB L3 Cache | With native power management|
 | ``Memory``                                | 16GB DDR4-3200MHz                                  |                                                                                                                                               |
 | ``GPU``                                   | AMD Radeon Vega 7                                                       | With full QE/CI (Graphics accleration), VRAM (UMA Buffer Size) set to 2GB|
-| ``Storage``                               | Micron MTFDKCD256TFK                                              |                                                                                                                                              |
+| ``Storage``                               | Kioxia Exceria Plus G2                                              |                                                                                                                                              |
 | ``Screen``                                | 14.0" 1080p 60Hz, TN                                            |                                                                                                                                               |
 | ``Webcam``                                | Integrated HD Webcam                                                          | Works!|
 | ``WiFi``                                  | Intel(R) Dual Band Wireless AC 8265                                                        | Works with Airportitlwm.kext                                                                |
