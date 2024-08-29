@@ -11,11 +11,11 @@
 
 ## Info / Disclaimer
 ### Info
-- `boot-args` used: `keepsyms=1 debug=0x100 swd_panic=1 npci=0x2000 revblock=media`
+- `boot-args` used: `revblock=media debug=0x100 keepsyms=1 swd_panic=1 npci=0x2000`
 - `alcid`: `11`
 - SMBIOS: `MacBookPro16,3`
-- ~~`ShowPicker`, `ScanPolicy` and `HideAuxilary` are set up in a way that automatically boots to a APFS partition with macOS installed without user confirmation. Adjust accordingly for installation (that's why you should read the guide).~~ You should still read the guide regardless.
-- NootedRed is not included, as it will be outdated anyway. Get it from its repository's [actions tab](https://github.com/ChefKissInc/NootedRed/actions)
+- [NootedRed](https://github.com/ChefKissInc/NootedRed) and [ForgedInvariant](https://github.com/ChefKissInc/ForgedInvariant) is not included, as they will be outdated anyway. Download from their respective Action artifacts.
+- No Wi-Fi and Bluetooth kexts are included, provide your own.
 ### Usage
 - You can use it however you like, except for commercial purposes (such as work environments and reselling your Hackintosh), refer to the [Psystar case](https://en.wikipedia.org/wiki/Psystar_Corporation). TLDR, you'll get your ass sued if you do so.
 - Reminder that this is only a base for your OpenCore setup and should always be viewed as incomplete, and it is strongly recommended that you follow the entire OpenCore guide [here](https://dortania.github.io/OpenCore-Install-Guide/). 
