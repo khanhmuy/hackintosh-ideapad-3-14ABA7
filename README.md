@@ -47,7 +47,7 @@ oversaturated mess)
 | ``Audio``                            | Realtek ALC257                                                      |                                                                                                                                               |
 | ``Battery``                               | 40Wh Lithium-ion                                                                  | Battery readout works.|
 | ``Keyboard``                              | -||
-| ``Touchpad``                              | ELAN(?) I2C Precision Touchpad                                                                | No issues.                                                                                            |
+| ``Touchpad``                              | ELAN(?) I2C Precision Touchpad                                                                | ~~No issues.~~ Stopped working for no reason and idk why.                                                                                            |
 | ``Dimensions``<br>``Weight``<br>``Power`` | 324.2 x 215.7 x 19.9<br>1.43kg<br>65W Power Adapter                        | ACPI patches won't help with these.|
 
 Special thanks to:
